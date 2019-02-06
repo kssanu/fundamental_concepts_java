@@ -1,5 +1,6 @@
 /**
-* to depict the use of final formal parameter : only point is you cannot assign a new value to final formal parameter, but can make modification
+* to depict the use of final formal parameter : only point is you cannot assign a new value to final formal parameter,
+ but can make modifications i.e you can modify a collection/ map/ string
 o/p :
 In m1 : final value of i is : 50 and value of string s : sanu
 calling m2 trying to change i and s
