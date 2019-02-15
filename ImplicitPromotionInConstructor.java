@@ -1,8 +1,12 @@
 package implicitpromotionofdatatypes;
 
 /**
- * @author 1040231
- *
+ * @author sanu
+ *	Implicit promotion is applied only for primitive data types
+ *	Not applicable for Wrapper classes. i.e promotion can happen in
+ *	following ways : byte -> shor -> int -> long -> float -> double
+ *	or char -> int -> long -> float -> double
+ *	but not this Byte -> Short -> Integer -> Long -> Float -> Double
  */
 public class ImplicitPromotionInConstructor {
 
@@ -10,7 +14,7 @@ public class ImplicitPromotionInConstructor {
 		System.out.println("no arg constructor");
 	}
 
-	public ImplicitPromotionInConstructor(Integer i) {
+	public ImplicitPromotionInConstructor(int i) {
 		System.out.println("Integer arg constructor");
 	}
 
@@ -22,6 +26,10 @@ public class ImplicitPromotionInConstructor {
 		// implicit promotion is applicable only for primitive data types
 		// implicit promotion is not applicable for Wrapper class i.e float
 		// can't be promoted to Double implicitly
-		ImplicitPromotionInConstructor ipic = new ImplicitPromotionInConstructor(12.3f); // c.e : The constructor ImplicitPromotionInConstructor(float) is undefined
+		// ImplicitPromotionInConstructor ipic = new ImplicitPromotionInConstructor(12.3f); 
+		// c.e : The constructor ImplicitPromotionInConstructor(float) is undefined
+		
+		// this will work as char -> int is possible
+		ImplicitPromotionInConstructor ipic1 = new ImplicitPromotionInConstructor('v'); 
 	}
 }
